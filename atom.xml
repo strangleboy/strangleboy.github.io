@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>航</title>
+  
+  <subtitle>我的大学</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://strangleboy.github.io/"/>
+  <updated>2019-06-01T06:28:41.082Z</updated>
+  <id>http://strangleboy.github.io/</id>
+  
+  <author>
+    <name>strangleboy</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>虚拟机安装Linux及常规操作（2）</title>
+    <link href="http://strangleboy.github.io/2019/06/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85Linux%E5%8F%8A%E5%B8%B8%E8%A7%84%E6%93%8D%E4%BD%9C%EF%BC%882%EF%BC%89/"/>
+    <id>http://strangleboy.github.io/2019/06/01/虚拟机安装Linux及常规操作（2）/</id>
+    <published>2019-06-01T04:28:40.136Z</published>
+    <updated>2019-06-01T06:28:41.082Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="总结" scheme="http://strangleboy.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="Linux" scheme="http://strangleboy.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>虚拟机安装Linux及常规操作（1）</title>
+    <link href="http://strangleboy.github.io/2019/06/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85Linux%E5%8F%8A%E5%B8%B8%E8%A7%84%E6%93%8D%E4%BD%9C%EF%BC%881%EF%BC%89/"/>
+    <id>http://strangleboy.github.io/2019/06/01/虚拟机安装Linux及常规操作（1）/</id>
+    <published>2019-06-01T04:28:40.133Z</published>
+    <updated>2019-06-01T06:28:46.322Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="总结" scheme="http://strangleboy.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="Linux" scheme="http://strangleboy.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端学习阶段性总结</title>
+    <link href="http://strangleboy.github.io/2019/06/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E9%97%B4%E6%96%AD%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    <id>http://strangleboy.github.io/2019/06/01/前端学习间断性总结/</id>
+    <published>2019-06-01T04:28:40.129Z</published>
+    <updated>2019-06-01T06:28:09.187Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="心得" scheme="http://strangleboy.github.io/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="前端" scheme="http://strangleboy.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo+github-pages搭建静态博客</title>
+    <link href="http://strangleboy.github.io/2019/06/01/hexo+github-pages%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://strangleboy.github.io/2019/06/01/hexo+github-pages搭建静态博客/</id>
+    <published>2019-06-01T04:28:40.125Z</published>
+    <updated>2019-06-01T06:35:45.610Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="总结" scheme="http://strangleboy.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="前端" scheme="http://strangleboy.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+</feed>
