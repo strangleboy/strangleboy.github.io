@@ -39,18 +39,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1">
 
 
-<meta name="description" content="前言 上了大学有人说博客就是用来展示自己技术的地方，是用来摆给HR看的，但就我而言并非如此。博客主要是用来总结学习经验的地方，把自己的学习感悟写出来促进我们继续学下去。同时它也是记录我们足迹的地方，每一丝新的发现，幸苦得到的感悟写在这里，这是一份快乐。所以这将是我以后抒发心中快乐的地方，而没有痛苦（ヽ●´∀`●ﾉ终于可以光明正大的学习了）！  初学 因为可以很快做出页面、可视化，所以选择了前端。">
+<meta name="description" content="Q:为什么在vue2.20+的版本中，在组件中是用v-for,key是必须的？   A:当Vue.js用v-for正在更新已渲染过的元素列表时，它默认用“就地复用”的策略。如果数据项的顺序被改变，Vue将不是移动DOM元素来匹配数据项的顺序，儿时简单的复用此处的每个元素，并且确保它在待定索引下显示一杯渲染国的每个元素。\为了给Vue一个提示，以便它能跟踪每个节点的身份，从而重用和重新排序现有的元">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端学习阶段性总结">
-<meta property="og:url" content="http://strangleboy.github.io/2019/06/01/前端学习间断性总结/index.html">
+<meta property="og:title" content="vue学习一些疑问的记录">
+<meta property="og:url" content="http://strangleboy.github.io/2020/04/17/vue学习一些疑问的记录/index.html">
 <meta property="og:site_name" content="航">
-<meta property="og:description" content="前言 上了大学有人说博客就是用来展示自己技术的地方，是用来摆给HR看的，但就我而言并非如此。博客主要是用来总结学习经验的地方，把自己的学习感悟写出来促进我们继续学下去。同时它也是记录我们足迹的地方，每一丝新的发现，幸苦得到的感悟写在这里，这是一份快乐。所以这将是我以后抒发心中快乐的地方，而没有痛苦（ヽ●´∀`●ﾉ终于可以光明正大的学习了）！  初学 因为可以很快做出页面、可视化，所以选择了前端。">
+<meta property="og:description" content="Q:为什么在vue2.20+的版本中，在组件中是用v-for,key是必须的？   A:当Vue.js用v-for正在更新已渲染过的元素列表时，它默认用“就地复用”的策略。如果数据项的顺序被改变，Vue将不是移动DOM元素来匹配数据项的顺序，儿时简单的复用此处的每个元素，并且确保它在待定索引下显示一杯渲染国的每个元素。\为了给Vue一个提示，以便它能跟踪每个节点的身份，从而重用和重新排序现有的元">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-01T06:28:09.187Z">
+<meta property="og:updated_time" content="2020-04-17T11:27:56.798Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端学习阶段性总结">
-<meta name="twitter:description" content="前言 上了大学有人说博客就是用来展示自己技术的地方，是用来摆给HR看的，但就我而言并非如此。博客主要是用来总结学习经验的地方，把自己的学习感悟写出来促进我们继续学下去。同时它也是记录我们足迹的地方，每一丝新的发现，幸苦得到的感悟写在这里，这是一份快乐。所以这将是我以后抒发心中快乐的地方，而没有痛苦（ヽ●´∀`●ﾉ终于可以光明正大的学习了）！  初学 因为可以很快做出页面、可视化，所以选择了前端。">
+<meta name="twitter:title" content="vue学习一些疑问的记录">
+<meta name="twitter:description" content="Q:为什么在vue2.20+的版本中，在组件中是用v-for,key是必须的？   A:当Vue.js用v-for正在更新已渲染过的元素列表时，它默认用“就地复用”的策略。如果数据项的顺序被改变，Vue将不是移动DOM元素来匹配数据项的顺序，儿时简单的复用此处的每个元素，并且确保它在待定索引下显示一杯渲染国的每个元素。\为了给Vue一个提示，以便它能跟踪每个节点的身份，从而重用和重新排序现有的元">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +60,7 @@
   };
 </script>
 
-  <title> 前端学习阶段性总结 | 航 </title>
+  <title> vue学习一些疑问的记录 | 航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -177,7 +177,7 @@
           
           
             
-              前端学习阶段性总结
+              vue学习一些疑问的记录
             
           
         </h1>
@@ -186,8 +186,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2019-06-01T12:28:40+08:00" content="2019-06-01">
-            2019-06-01
+          <time itemprop="dateCreated" datetime="2020-04-17T17:43:13+08:00" content="2020-04-17">
+            2020-04-17
           </time>
         </span>
 
@@ -196,8 +196,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/心得/" itemprop="url" rel="index">
-                  <span itemprop="name">心得</span>
+                <a href="/categories/Vue/" itemprop="url" rel="index">
+                  <span itemprop="name">Vue</span>
                 </a>
               </span>
 
@@ -221,17 +221,23 @@
 
       
         <span itemprop="articleBody"><hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
-<p>上了大学有人说博客就是用来展示自己技术的地方，是用来摆给HR看的，但就我而言并非如此。博客主要是用来总结学习经验的地方，把自己的学习感悟写出来促进我们继续学下去。同时它也是记录我们足迹的地方，每一丝新的发现，幸苦得到的感悟写在这里，这是一份快乐。所以这将是我以后抒发心中快乐的地方，而没有痛苦（ヽ●<em>´∀`</em>●ﾉ终于可以光明正大的学习了）！</p>
+<p>Q:为什么在vue2.20+的版本中，在组件中是用v-for,key是必须的？</p>
 <hr>
-<h1 id="初学"><a href="#初学" class="headerlink" title="初学"></a>初学</h1><hr>
-<p>因为可以很快做出页面、可视化，所以选择了<em>前端</em>。学习过程中只学习了HTML+CSS模块，了解了几种布局。明白了”贪多嚼不烂打“的道理。只是模仿别人的页面制作，时常看看一些比较有创意的网页，品味一下制作网页的乐趣。</p>
+<blockquote>
+<p>A:当Vue.js用v-for正在更新已渲染过的元素列表时，它默认用“就地复用”的策略。如果数据项的顺序被改变，Vue将不是移动DOM元素来匹配数据项的顺序，儿时简单的复用此处的每个元素，并且确保它在待定索引下显示一杯渲染国的每个元素。\<br>为了给Vue一个提示，以便它能跟踪每个节点的身份，从而重用和重新排序现有的元素，你需要为每项提供一个唯一的key属性</p>
+</blockquote>
 <hr>
-<h1 id="一年"><a href="#一年" class="headerlink" title="一年"></a>一年</h1><hr>
-<p>距离接触前端已经一年了，熟悉了静态页面，逐渐尝试接触动态页面与框架，熟悉原生JS，这些都成了我需要去做的东西。我学习用前端写小游戏，前端画图。但我感觉在大学期间要只学习一门语言实在太过可惜，我又接触了MATLAB与Python。最近机器学习的兴起，让我觉得在前端领域将也可以用到机器学习，新技术的加入让我更加意识到我学习的进度太过缓慢，很容易被淘汰，所以写下此片博客与各位和我一样的学子们共勉。</p>
+<p>Q:JS中push(),pop(),unshift(),shift()的联系和区别？</p>
 <hr>
-<h1 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h1><hr>
-<p>学习一样东西，总是需要不断地尝试，不断地吸取经验教训才能真正理解。浪费的日子无法弥补，只能用日后的勤奋来追赶。无论事业还是人生，追逐才是主旋律。</p>
+<blockquote>
+<p>A:联系：这两组同为对数组的操作，并且会改变数组的本身的长度以及内容。\<br>区别：不同的是push()、pop()是从数组的尾部进行增减，unshift()、shift()是从数组的头部进行增减。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//push()和unshift()是向数组的尾部/头部添加若干元素，并返回素组的新长度</span></span><br><span class="line">arr.push(<span class="number">3</span>,<span class="number">4</span>);  <span class="comment">//返回arr的新长度4</span></span><br><span class="line">arr;  <span class="comment">//arr = [1,2,3,4]</span></span><br><span class="line">arr.unshift(<span class="number">0</span>,<span class="number">0.5</span>);  <span class="comment">//返回 arr 的新长度6</span></span><br><span class="line">arr;  <span class="comment">//arr = [0,0.5,1,2,3,4]</span></span><br><span class="line"><span class="comment">//pop()和shift()从数组的尾部/头部删除1个元素(删且只删一个)，并返回被删除的元素；空数组是继续删除，不报错，但返回undefined</span></span><br><span class="line">arr.pop();  <span class="comment">//返回4</span></span><br><span class="line">arr ;  <span class="comment">//arr = [0,0.5,1,2,3];</span></span><br><span class="line">arr.pop();  <span class="comment">//返回3</span></span><br><span class="line">arr ;   <span class="comment">//arr = [0,0.5,1,2];</span></span><br><span class="line">arr.shift();    <span class="comment">//返回0；</span></span><br><span class="line">arr ;   <span class="comment">//arr = [0.5,1,2];</span></span><br><span class="line"><span class="comment">//pop()和shift()不接受传参，即使传了参数也没什么用</span></span><br><span class="line">arr.pop(<span class="number">3</span>) ;  <span class="comment">//返回2；永远返回最后一个；</span></span><br><span class="line">arr ; 　<span class="comment">// arr = [0.5,1];</span></span><br><span class="line">arr.shift(<span class="number">1</span>);　　　　<span class="comment">// 返回 0.5; 永远返回第一个；</span></span><br><span class="line">arr ;　　　<span class="comment">// arr = [1];</span></span><br><span class="line">arr.pop() ; 　<span class="comment">// 返回 1；</span></span><br><span class="line">arr ;　　　　<span class="comment">// arr = [];</span></span><br><span class="line">arr.shift()　　<span class="comment">// 返回 undefined；</span></span><br><span class="line">arr ;　　　　<span class="comment">// arr = []</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<p>Q:.stop与.self同样都可以阻止冒泡，他们的区别？</p>
+<hr>
+<blockquote>
+<p>A：.stop阻止所有的冒泡行为，而.self只是阻止了自己元素的冒泡行为，没有真正的阻止冒泡。</p>
+</blockquote>
 </span>
       
     </div>
@@ -249,13 +255,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/01/虚拟机安装Linux及常规操作（1）/" rel="prev">虚拟机安装Linux及常规操作（1）</a>
+              <a href="/2020/04/17/vue生命周期/" rel="prev">vue生命周期</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/01/hexo+github-pages搭建静态博客/" rel="next">hexo+github-pages搭建静态博客</a>
+              <a href="/2019/06/01/虚拟机安装Linux及常规操作（2）/" rel="next">虚拟机安装Linux及常规操作（2）</a>
             
           </div>
         </div>
@@ -513,7 +519,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初学"><span class="nav-number">2.</span> <span class="nav-text">初学</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一年"><span class="nav-number">3.</span> <span class="nav-text">一年</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感悟"><span class="nav-number">4.</span> <span class="nav-text">感悟</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

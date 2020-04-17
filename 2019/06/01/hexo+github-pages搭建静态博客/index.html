@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="航">
 <meta property="og:description" content="前言1.疑问咨询：Hexo 错误咨询：troubleshooting或GitHub.2.本文意在总结搭建博客的步骤与提供一些我所遇问题的解决方法3.使用hexo与github有诸多好处，不多赘叙。如果不喜欢 .github.io的域名可自己随意绑定别的域名  准备 注册github 安装node.js，git   搭建 github阶段1.进入github首页，点击白色按钮Start a proj">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-01T06:35:45.610Z">
+<meta property="og:updated_time" content="2020-04-17T11:25:07.798Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github-pages搭建静态博客">
 <meta name="twitter:description" content="前言1.疑问咨询：Hexo 错误咨询：troubleshooting或GitHub.2.本文意在总结搭建博客的步骤与提供一些我所遇问题的解决方法3.使用hexo与github有诸多好处，不多赘叙。如果不喜欢 .github.io的域名可自己随意绑定别的域名  准备 注册github 安装node.js，git   搭建 github阶段1.进入github首页，点击白色按钮Start a proj">
@@ -302,6 +302,33 @@
 </blockquote>
 <p>进行本地的预览修改。修改后使用<font color="red">hexo d -g</font>上传即成！</p>
 <p><font color="red">PS:</font>移动过程中需要一同把<font color="red">.ssh</font>和<font color="red">hexo、git、node.js</font>转移。（当即使这样也需重新安装git、hexo，并且还需要重新上述命令操作）</p>
+<h1 id="意外状况"><a href="#意外状况" class="headerlink" title="意外状况"></a>意外状况</h1><p>好久没打开博客了，今天写了篇博文，兴致满满地在gitbash中输入<code>$hexo s -g$</code>预览一下我辛苦的成果XD…结果</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo</span><br><span class="line">bash: hexo: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>开什么玩笑！！！我的hexo命令竟然找不到？<br>赶紧google起来<br>得到了如下的解决方案：</p>
+<ol>
+<li><p>使用git bash输入一下命令，检查nodejs是否安装</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>检查npm是否安装</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p><strong>嗯~很好没有问题</strong></p>
+<ol start="3">
+<li>检查hexo相应模块是否安装<br>进入文件夹查看是否有node_modules</li>
+<li>配置环境变量<br>将于_config.yml同文件夹的node_modules中的.bin文件夹的路径放入Path中</li>
+</ol>
+<p>很好！你可以执行你的hexo了吗？虾米？你可以了？我。。。看来我只能使用我的终极绝招了</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install hexo-cli -g</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>完美解决！！！XDD<br>————————————————–OVER BOLG—————————————————–</p>
 </span>
       
     </div>
@@ -509,14 +536,14 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
@@ -581,7 +608,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建"><span class="nav-number">3.</span> <span class="nav-text">搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#github阶段"><span class="nav-number">3.1.</span> <span class="nav-text">github阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo阶段"><span class="nav-number">3.2.</span> <span class="nav-text">hexo阶段</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写博客"><span class="nav-number">4.</span> <span class="nav-text">写博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建"><span class="nav-number">3.</span> <span class="nav-text">搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#github阶段"><span class="nav-number">3.1.</span> <span class="nav-text">github阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo阶段"><span class="nav-number">3.2.</span> <span class="nav-text">hexo阶段</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写博客"><span class="nav-number">4.</span> <span class="nav-text">写博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#意外状况"><span class="nav-number">5.</span> <span class="nav-text">意外状况</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -598,7 +625,7 @@
       <div class="footer-inner"> <div class="copyright">
   
   &copy; &nbsp;  2011 - 
-  <span itemprop="copyrightYear">2019
+  <span itemprop="copyrightYear">2020
   </span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
