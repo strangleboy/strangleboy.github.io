@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Linux,">
+  <meta name="keywords" content="数据库,">
 
 
 
@@ -39,18 +39,21 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1">
 
 
-<meta name="description" content="Linux常用命令 基础命令 ls命令(list) 1.ls -a:显示当前目录下所有文件（包含隐藏文件）2.ls -l:显示当前目录下非隐藏文件的详细信息3.ls -la:显示当前目录所有文件的详细信息   cd命令(change directory) 1.cd pathname(dirname)：进入到目标文件夹，即切换工作目录//pathname指的是目标文件夹的路径，常用tab键补全路径">
-<meta name="keywords" content="Linux">
+<meta name="description" content="遇到了不能进入root的情况,出现以下提示：1ERROR 1045 (28000): Access denied for user root@localhost (using password: YES) 网上查了一下这个的解决方案，大都是在my.ini中加入skip-gran-tables尝试了一下发现根本无法重启mysql几经查找原来是mysql版本问题，解决问题之后再这里总结一下（参考链接）">
+<meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="虚拟机安装Linux及常规操作（2）">
-<meta property="og:url" content="http://strangleboy.github.io/2019/06/01/虚拟机安装Linux及常规操作（2）/index.html">
+<meta property="og:title" content="mysql8.0以上修改root密码">
+<meta property="og:url" content="http://strangleboy.github.io/2020/04/20/mysql8.0以上修改root密码/index.html">
 <meta property="og:site_name" content="航">
-<meta property="og:description" content="Linux常用命令 基础命令 ls命令(list) 1.ls -a:显示当前目录下所有文件（包含隐藏文件）2.ls -l:显示当前目录下非隐藏文件的详细信息3.ls -la:显示当前目录所有文件的详细信息   cd命令(change directory) 1.cd pathname(dirname)：进入到目标文件夹，即切换工作目录//pathname指的是目标文件夹的路径，常用tab键补全路径">
+<meta property="og:description" content="遇到了不能进入root的情况,出现以下提示：1ERROR 1045 (28000): Access denied for user root@localhost (using password: YES) 网上查了一下这个的解决方案，大都是在my.ini中加入skip-gran-tables尝试了一下发现根本无法重启mysql几经查找原来是mysql版本问题，解决问题之后再这里总结一下（参考链接）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-01T06:28:41.082Z">
+<meta property="og:image" content="http://strangleboy.github.io/2020/04/20/mysql8/img/first.png">
+<meta property="og:image" content="http://strangleboy.github.io/2020/04/20/mysql8/img/second.png">
+<meta property="og:updated_time" content="2020-04-20T07:38:36.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="虚拟机安装Linux及常规操作（2）">
-<meta name="twitter:description" content="Linux常用命令 基础命令 ls命令(list) 1.ls -a:显示当前目录下所有文件（包含隐藏文件）2.ls -l:显示当前目录下非隐藏文件的详细信息3.ls -la:显示当前目录所有文件的详细信息   cd命令(change directory) 1.cd pathname(dirname)：进入到目标文件夹，即切换工作目录//pathname指的是目标文件夹的路径，常用tab键补全路径">
+<meta name="twitter:title" content="mysql8.0以上修改root密码">
+<meta name="twitter:description" content="遇到了不能进入root的情况,出现以下提示：1ERROR 1045 (28000): Access denied for user root@localhost (using password: YES) 网上查了一下这个的解决方案，大都是在my.ini中加入skip-gran-tables尝试了一下发现根本无法重启mysql几经查找原来是mysql版本问题，解决问题之后再这里总结一下（参考链接）">
+<meta name="twitter:image" content="http://strangleboy.github.io/2020/04/20/mysql8/img/first.png">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +63,7 @@
   };
 </script>
 
-  <title> 虚拟机安装Linux及常规操作（2） | 航 </title>
+  <title> mysql8.0以上修改root密码 | 航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -177,7 +180,7 @@
           
           
             
-              虚拟机安装Linux及常规操作（2）
+              mysql8.0以上修改root密码
             
           
         </h1>
@@ -186,8 +189,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2019-06-01T12:28:40+08:00" content="2019-06-01">
-            2019-06-01
+          <time itemprop="dateCreated" datetime="2020-04-20T15:20:17+08:00" content="2020-04-20">
+            2020-04-20
           </time>
         </span>
 
@@ -196,8 +199,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/总结/" itemprop="url" rel="index">
-                  <span itemprop="name">总结</span>
+                <a href="/categories/mysql/" itemprop="url" rel="index">
+                  <span itemprop="name">mysql</span>
                 </a>
               </span>
 
@@ -220,99 +223,18 @@
       
 
       
-        <span itemprop="articleBody"><hr>
-<h1 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h1><hr>
-<h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><ul>
-<li>ls命令(list)<blockquote>
-<p>1.ls -a:显示当前目录下所有文件（包含隐藏文件）<br>2.ls -l:显示当前目录下非隐藏文件的详细信息<br>3.ls -la:显示当前目录所有文件的详细信息</p>
-</blockquote>
-</li>
-<li>cd命令(change directory)<blockquote>
-<p>1.cd pathname(dirname)：进入到目标文件夹，即切换工作目录<br>//pathname指的是目标文件夹的路径，常用<em>tab</em>键补全路径中较长的文件夹名<br>2.cd ..:移动至上层目录<br>3.cd .:移动至当前目录<br>//“..””.”也可用于路径当中<br>4.cd -:移动至上一个目录（即上一次所在目录）</p>
-</blockquote>
-</li>
-<li>mv命令(move)<blockquote>
-<p>mv 源文件名或目录 目标文件名或目录:若源文件所在目录与目标文件所在目录相同，但名不同，即是完成改名功能；若不一致，这完成移动并改名功能。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="创建命令"><a href="#创建命令" class="headerlink" title="创建命令"></a>创建命令</h2><ul>
-<li>mkdir命令(make directory)<blockquote>
-<p>mkdir -p:可使用mkdir -p one/two/three创建多层文件夹，也可以mkdir -p one two three同时创建多个文件夹</p>
-</blockquote>
-</li>
-<li>touch命令<blockquote>
-<p>很简单即创建一个文件（不进入）。</p>
-</blockquote>
-</li>
-<li>vi命令<blockquote>
-<p>使用vi或vim编辑器创建文件（ 进入编辑模式）。</p>
-</blockquote>
-</li>
-<li>ln命令(link)<blockquote>
-<p>ln oldfile newfile:硬连接。相当于一个与原文件只有名字不同的文件，改变任何一个文件内容，两个文件均会改变，当删除其中一个另一个不会受影响。并且硬连接只可以用于文件。<br>ln -s old.file new.link：软连接（符号连接）。相当于Windows中的快捷方式，若源文件删除，连接文件将失效，该连接方式内存占用小于源文件。可以用于文件和文件夹。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="删除命令"><a href="#删除命令" class="headerlink" title="删除命令"></a>删除命令</h2><ul>
-<li>rmdir命令(remove directory)<blockquote>
-<p>即删除空文件夹</p>
-</blockquote>
-</li>
-<li>rm命令(remove)<blockquote>
-<p>rm -rf:强制删除文件或文件夹</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="下载命令"><a href="#下载命令" class="headerlink" title="下载命令"></a>下载命令</h2><ul>
-<li>apt-get install<blockquote>
-<p>在ubuntu中有自己的应用商店，在root下可以直接用<em>apt-get install softwarename</em>进行下载，普通用户可以使用<em>sudo</em>命令置于该命令前短暂开启权限。当然也可以通过网络下载应用程序，不过会涉及兼容性问题，会遇到很多的障碍。<br>对于一些应用的下载可以能会使用插件，有自己的下载命令，自行查找即可。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="查询查找命令"><a href="#查询查找命令" class="headerlink" title="查询查找命令"></a>查询查找命令</h2><ul>
-<li>man命令<blockquote>
-<p>man 1 name：用来查看命令的帮助<br>man 2 name：系统调用函数查询(linux api)<br>man 3 naem：C库函数查询</p>
-</blockquote>
-</li>
-<li>which命令<blockquote>
-<p>查看可执行文件的位置</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="打印命令"><a href="#打印命令" class="headerlink" title="打印命令"></a>打印命令</h2><ul>
-<li>pwd命令(print work directory)<blockquote>
-<p>打印工作目录（绝对路径）</p>
-</blockquote>
-</li>
-<li>cat命令(catch)<blockquote>
-<p>直接在命令下显示文件内容（常常用于比较短小的文件）</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="复制命令"><a href="#复制命令" class="headerlink" title="复制命令"></a>复制命令</h2><ul>
-<li>cp命令(copy)<blockquote>
-<p>1.cp oldfile newfile:复制oldfile中内容到newfile中（newfile的路径可以是任意，且newfile先前可以不存在。）<br>2.cp -rf:复制文件夹内容到另一个文件夹中，使用方法同上。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="权限管理命令"><a href="#权限管理命令" class="headerlink" title="权限管理命令"></a>权限管理命令</h2><p>了解权限管理命令，首先需要知道rwx的权限表示是什么意思。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">下面是权限所代表的数值</span><br><span class="line">r   可读     4</span><br><span class="line">w   可写     2</span><br><span class="line">x   可执行   1</span><br><span class="line">-   无权限   0</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>chmod命令(change mode)<blockquote>
-<p>1.chmod 744 dirname：把原有权限改为rwxr- -r- -<br>//后9个编码三个一读，一计数<br>2.chmod u+x dirname：要属主增加可执行权限<br>3.chmod o+w dirname：其他用户增加可写权限<br>4.chmod g-x dirname：属主所在组用户去掉可执行权限</p>
-</blockquote>
-</li>
-<li>chown命令(change owner)<blockquote>
-<p>修改属主</p>
-</blockquote>
-</li>
-<li>chgrp命令(change group)<blockquote>
-<p>修改文件的组</p>
-</blockquote>
-</li>
-</ul>
+        <span itemprop="articleBody"><p>遇到了不能进入root的情况,出现以下提示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR 1045 (28000): Access denied <span class="keyword">for</span> user root@localhost (using password: YES)</span><br></pre></td></tr></table></figure></p>
+<p>网上查了一下这个的解决方案，大都是在my.ini中加入<code>skip-gran-tables</code><br>尝试了一下发现根本无法重启mysql<br>几经查找原来是mysql版本问题，解决问题之后再这里总结一下（<a href="https://blog.csdn.net/qq_27820551/article/details/101488430" target="_blank" rel="noopener">参考链接</a>）</p>
 <hr>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>以上就是常用的Linux命令，当这成为Linux高手是远远不够的，这需要我们不断学习进步。所以我在这里再加入一些较为少见的命令。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">* whereis：查看文件的位置</span><br><span class="line">* find：实际搜索硬盘查询文件名称</span><br><span class="line">* ps -em，top：查看进程</span><br><span class="line">* tar zxvf FileName.tar：解压tar文件</span><br><span class="line">* tar czvf FileName.tar DirName：打包tar文件</span><br><span class="line">* shutdown -h now：立即关机</span><br><span class="line">* shutdown -r now：立即重启</span><br><span class="line">* du -h：列出文件或文件夹的大小</span><br><span class="line">* df -h：显示已挂载的分区列表</span><br><span class="line">......</span><br></pre></td></tr></table></figure></p>
+<h2 id="第一步：确认关闭了mysql"><a href="#第一步：确认关闭了mysql" class="headerlink" title="第一步：确认关闭了mysql"></a>第一步：确认关闭了mysql</h2><p>以管理员身份运行cmd（下同），输入<code>net stop mysql</code>关闭服务</p>
+<hr>
+<h2 id="第二步：跳过权限认证"><a href="#第二步：跳过权限认证" class="headerlink" title="第二步：跳过权限认证"></a>第二步：跳过权限认证</h2><p>命令行输入<code>mysqld --console --skip-grant-tables --shared-memory</code>,如下图：<br><img src="/2020/04/20/mysql8/img/first.png" alt="跳过权限"><br>这时窗口应该无法继续操作，不要关闭此窗口，新开启一个cmd。</p>
+<hr>
+<h2 id="第三步：免密进入mysql修改密码"><a href="#第三步：免密进入mysql修改密码" class="headerlink" title="第三步：免密进入mysql修改密码"></a>第三步：免密进入mysql修改密码</h2><p>直接执行<code>$mysql$</code>即可出现</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>接着依次输入：<br>1.use mysql;<br>2.update user set authentication_string=’’ where user=’root’;<br>3.flush privileges;<br>4.ALTER user ‘root‘@’localhost’ IDENTIFIED BY ‘123456’;<br>即可修改root密码为123456（上面命令中一定要带有“；”）<br><img src="/2020/04/20/mysql8/img/second.png" alt="“修改密码”"></p>
 </span>
       
     </div>
@@ -321,7 +243,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag">#Linux</a>
+            <a href="/tags/数据库/" rel="tag">#数据库</a>
           
         </div>
       
@@ -330,13 +252,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/17/vue学习一些疑问的记录/" rel="prev">vue学习一些疑问的记录</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/01/虚拟机安装Linux及常规操作（1）/" rel="next">虚拟机安装Linux及常规操作（1）</a>
+              <a href="/2020/04/19/cookie、localStorage和sessionStorage的区别/" rel="next">cookie、localStorage和sessionStorage的区别</a>
             
           </div>
         </div>
@@ -594,7 +514,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux常用命令"><span class="nav-number">1.</span> <span class="nav-text">Linux常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础命令"><span class="nav-number">1.1.</span> <span class="nav-text">基础命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建命令"><span class="nav-number">1.2.</span> <span class="nav-text">创建命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除命令"><span class="nav-number">1.3.</span> <span class="nav-text">删除命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载命令"><span class="nav-number">1.4.</span> <span class="nav-text">下载命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询查找命令"><span class="nav-number">1.5.</span> <span class="nav-text">查询查找命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印命令"><span class="nav-number">1.6.</span> <span class="nav-text">打印命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制命令"><span class="nav-number">1.7.</span> <span class="nav-text">复制命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#权限管理命令"><span class="nav-number">1.8.</span> <span class="nav-text">权限管理命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">2.</span> <span class="nav-text">结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：确认关闭了mysql"><span class="nav-number">1.</span> <span class="nav-text">第一步：确认关闭了mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：跳过权限认证"><span class="nav-number">2.</span> <span class="nav-text">第二步：跳过权限认证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步：免密进入mysql修改密码"><span class="nav-number">3.</span> <span class="nav-text">第三步：免密进入mysql修改密码</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
