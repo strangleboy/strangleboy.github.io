@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="前端,">
+  <meta name="keywords" content="算法,">
 
 
 
@@ -39,18 +39,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1">
 
 
-<meta name="description" content="通过ctrl+alt+P通过关键字Preference找到配置用户代码块 新建代码块，写入你要用的关键字   关于vue的两个模板 12345678910111213141516171819202122232425262728293031323334&amp;#123;&quot;vh&quot;: &amp;#123;		&quot;prefix&quot;: &quot;vh&quot;, // 触发的关键字 输入vh按下tab键		&quot;body&quot;: [			&quot;&amp;lt">
-<meta name="keywords" content="前端">
+<meta name="description" content="前言面试的时候，面试官问道了排序算法的问题，自感觉这方面还是不够熟练。所以写一篇blog总结一下。 冒泡排序这是最简单也是复杂度最高的排序算法了，这是一种稳定的排序算法，因为它最终相同元素的相对顺序没有发生改变。 复杂度 时间复杂度：  平均情况：$O(n^2)$ 最好情况： $O(n)$ 最坏情况：$O(n^2)$    空间复杂度： $O(1)$  原理从第一个元素开始，遇到小的就交换位置。">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用VScode创建模板">
-<meta property="og:url" content="http://strangleboy.github.io/2020/04/17/使用VScode创建模板/index.html">
+<meta property="og:title" content="js排序算法总结">
+<meta property="og:url" content="http://strangleboy.github.io/2020/05/16/js排序算法总结/index.html">
 <meta property="og:site_name" content="航">
-<meta property="og:description" content="通过ctrl+alt+P通过关键字Preference找到配置用户代码块 新建代码块，写入你要用的关键字   关于vue的两个模板 12345678910111213141516171819202122232425262728293031323334&amp;#123;&quot;vh&quot;: &amp;#123;		&quot;prefix&quot;: &quot;vh&quot;, // 触发的关键字 输入vh按下tab键		&quot;body&quot;: [			&quot;&amp;lt">
+<meta property="og:description" content="前言面试的时候，面试官问道了排序算法的问题，自感觉这方面还是不够熟练。所以写一篇blog总结一下。 冒泡排序这是最简单也是复杂度最高的排序算法了，这是一种稳定的排序算法，因为它最终相同元素的相对顺序没有发生改变。 复杂度 时间复杂度：  平均情况：$O(n^2)$ 最好情况： $O(n)$ 最坏情况：$O(n^2)$    空间复杂度： $O(1)$  原理从第一个元素开始，遇到小的就交换位置。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-17T12:22:36.852Z">
+<meta property="og:updated_time" content="2020-05-16T09:29:45.309Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用VScode创建模板">
-<meta name="twitter:description" content="通过ctrl+alt+P通过关键字Preference找到配置用户代码块 新建代码块，写入你要用的关键字   关于vue的两个模板 12345678910111213141516171819202122232425262728293031323334&amp;#123;&quot;vh&quot;: &amp;#123;		&quot;prefix&quot;: &quot;vh&quot;, // 触发的关键字 输入vh按下tab键		&quot;body&quot;: [			&quot;&amp;lt">
+<meta name="twitter:title" content="js排序算法总结">
+<meta name="twitter:description" content="前言面试的时候，面试官问道了排序算法的问题，自感觉这方面还是不够熟练。所以写一篇blog总结一下。 冒泡排序这是最简单也是复杂度最高的排序算法了，这是一种稳定的排序算法，因为它最终相同元素的相对顺序没有发生改变。 复杂度 时间复杂度：  平均情况：$O(n^2)$ 最好情况： $O(n)$ 最坏情况：$O(n^2)$    空间复杂度： $O(1)$  原理从第一个元素开始，遇到小的就交换位置。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +60,7 @@
   };
 </script>
 
-  <title> 使用VScode创建模板 | 航 </title>
+  <title> js排序算法总结 | 航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -177,7 +177,7 @@
           
           
             
-              使用VScode创建模板
+              js排序算法总结
             
           
         </h1>
@@ -186,8 +186,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2020-04-17T20:20:44+08:00" content="2020-04-17">
-            2020-04-17
+          <time itemprop="dateCreated" datetime="2020-05-16T11:18:52+08:00" content="2020-05-16">
+            2020-05-16
           </time>
         </span>
 
@@ -196,8 +196,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Vue/" itemprop="url" rel="index">
-                  <span itemprop="name">Vue</span>
+                <a href="/categories/总结/" itemprop="url" rel="index">
+                  <span itemprop="name">总结</span>
                 </a>
               </span>
 
@@ -220,18 +220,22 @@
       
 
       
-        <span itemprop="articleBody"><ol>
-<li>通过<code>ctrl+alt+P</code>通过关键字<code>Preference</code>找到配置用户代码块</li>
-<li>新建代码块，写入你要用的关键字</li>
-</ol>
+        <span itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>面试的时候，面试官问道了排序算法的问题，自感觉这方面还是不够熟练。所以写一篇blog总结一下。</p>
+<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>这是最简单也是复杂度最高的排序算法了，这是一种稳定的排序算法，因为它最终相同元素的相对顺序没有发生改变。</p>
+<h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><ul>
+<li>时间复杂度：<blockquote>
 <ul>
-<li>关于vue的两个模板<blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="attr">"vh"</span>: &#123;</span><br><span class="line">		"prefix": "vh", // 触发的关键字 输入vh按下tab键</span><br><span class="line">		"body": [</span><br><span class="line">			"&lt;!DOCTYPE html&gt;",</span><br><span class="line">			"&lt;html lang=\"en\"&gt;",</span><br><span class="line">			"",</span><br><span class="line">			"&lt;head&gt;",</span><br><span class="line">			"    &lt;meta charset=\"UTF-8\" /&gt;",</span><br><span class="line">			"    &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /&gt;",</span><br><span class="line">			"    &lt;meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" /&gt;",</span><br><span class="line">			"    &lt;title&gt;Document&lt;/title&gt;",</span><br><span class="line">			"    &lt;script src=\"./lib/vue-2.4.0.js\"&gt;&lt;/script&gt;",</span><br><span class="line">			"&lt;/head&gt;",</span><br><span class="line">			"&lt;body&gt;",</span><br><span class="line">			" &lt;!-- 被vm 实例所控制的区域 --&gt;",</span><br><span class="line">			"    &lt;div id=\"app\"&gt;&lt;/div&gt;",</span><br><span class="line">			"",</span><br><span class="line">			"    &lt;script&gt;",</span><br><span class="line">			"		// 创建实例对象",</span><br><span class="line">			"        const vm=new Vue(&#123;",</span><br><span class="line">			"			// 指定控制的区域",</span><br><span class="line">			"           el:'#app',",</span><br><span class="line">			"           data:&#123;&#125;,",</span><br><span class="line">			"           methods:&#123;&#125;",</span><br><span class="line">			"        &#125;);",</span><br><span class="line">			"    &lt;/script&gt;",</span><br><span class="line">			"&lt;/body&gt;",</span><br><span class="line">			"",</span><br><span class="line">			"&lt;/html&gt;",</span><br><span class="line">		],</span><br><span class="line">		"description": "vh components"</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>平均情况：<code>$O(n^2)$</code></li>
+<li>最好情况： <code>$O(n)$</code></li>
+<li>最坏情况：<code>$O(n^2)$</code></li>
+</ul>
 </blockquote>
 </li>
+<li>空间复杂度： <code>$O(1)$</code></li>
 </ul>
-<blockquote>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"Print to console"</span>: &#123;</span><br><span class="line">	  <span class="attr">"prefix"</span>: <span class="string">"vue"</span>,</span><br><span class="line">	  <span class="attr">"body"</span>: [</span><br><span class="line">		<span class="string">"&lt;template&gt;"</span>,</span><br><span class="line">		<span class="string">"  &lt;div&gt;"</span>,</span><br><span class="line">		<span class="string">""</span>,</span><br><span class="line">		<span class="string">"  &lt;/div&gt;"</span>,</span><br><span class="line">		<span class="string">"&lt;/template&gt;"</span>,</span><br><span class="line">		<span class="string">""</span>,</span><br><span class="line">		<span class="string">"&lt;script&gt;"</span>,</span><br><span class="line">		<span class="string">"export default &#123;"</span>,</span><br><span class="line">		<span class="string">"  data () &#123;"</span>,</span><br><span class="line">		<span class="string">"    return &#123;"</span>,</span><br><span class="line">		<span class="string">"    &#125;"</span>,</span><br><span class="line">		<span class="string">"  &#125;,"</span>,</span><br><span class="line">		<span class="string">""</span>,</span><br><span class="line">		<span class="string">"  components: &#123;&#125;,"</span>,</span><br><span class="line">		<span class="string">""</span>,</span><br><span class="line">		<span class="string">"  methods: &#123;&#125;"</span>,</span><br><span class="line">		<span class="string">"&#125;"</span>,</span><br><span class="line">		<span class="string">""</span>,</span><br><span class="line">		<span class="string">"&lt;/script&gt;"</span>,</span><br><span class="line">		<span class="string">"&lt;style lang='scss' scoped&gt;"</span>,</span><br><span class="line">		<span class="string">"&lt;/style&gt;"</span></span><br><span class="line">	],</span><br><span class="line">	  <span class="attr">"description"</span>: <span class="string">"Log output to console"</span></span><br><span class="line">	&#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></blockquote>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>从第一个元素开始，遇到小的就交换位置。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">// 第一种写法</span><br><span class="line">// 这种写法第一遍遍历即将最大的元素放在最后面</span><br><span class="line">functionbubbleSort(arr)&#123;</span><br><span class="line">  var len=arr.length;</span><br><span class="line">  for(var i=0;i&lt;len;i++)&#123;</span><br><span class="line">    for(var j=0;j&lt;len-1-i;j++)&#123;  </span><br><span class="line">      if(arr[j]&gt;arr[j+1])&#123;</span><br><span class="line">        //相邻元素两两对比</span><br><span class="line">        var temp = arr[j+1]; //交互位置,所以大的都放到了最后面</span><br><span class="line">        arr[j+1]=arr[j];</span><br><span class="line">        arr[j]=temp;  </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return arr;</span><br><span class="line">&#125;</span><br><span class="line">// 第二种写法</span><br><span class="line">// 这种写法在第一遍遍历即将最小的元素放在最前面</span><br><span class="line">function bubbleSortOther(arr)&#123;</span><br><span class="line">  var len=arr.length;</span><br><span class="line">  for(var i=0;i&lt;len;i++)&#123;</span><br><span class="line">    for(var j=i+1;j&lt;len;j++)&#123;</span><br><span class="line">      if(arr[i]&gt;arr[j])&#123;</span><br><span class="line">        //依次将第i个元素与其之后的元素进行比较  </span><br><span class="line">        var temp=arr[j];</span><br><span class="line">        //交互位置,所以将最小的交换到第一位  </span><br><span class="line">        arr[j]=arr[i];  </span><br><span class="line">        arr[i]=temp;  </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return arr;</span><br><span class="line">&#125;</span><br><span class="line">var arr=[2,3,6,4,2,1,90,100,20,5];</span><br><span class="line">console.log(bubbleSort(arr)); // [1, 2, 2, 3, 4, 5, 6, 20, 90, 100]</span><br></pre></td></tr></table></figure>
+<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>这种排序是把排序的算法分成两部分：<br>1.包含这个数组的所有元素，但将第一个元素除外</p>
 </span>
       
     </div>
@@ -240,7 +244,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端/" rel="tag">#前端</a>
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -249,13 +253,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/19/cookie、localStorage和sessionStorage的区别/" rel="prev">cookie、localStorage和sessionStorage的区别</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/17/如何创建一个vue项目/" rel="next">如何创建一个vue项目</a>
+              <a href="/2020/04/20/mysql8.0以上修改root密码/" rel="next">mysql8.0以上修改root密码</a>
             
           </div>
         </div>
@@ -513,7 +515,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#冒泡排序"><span class="nav-number">2.</span> <span class="nav-text">冒泡排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂度"><span class="nav-number">2.1.</span> <span class="nav-text">复杂度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">2.2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.3.</span> <span class="nav-text">实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入排序"><span class="nav-number">3.</span> <span class="nav-text">插入排序</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
