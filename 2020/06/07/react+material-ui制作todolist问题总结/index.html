@@ -39,18 +39,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1">
 
 
-<meta name="description" content="beforeCreate（创建前） 在数据观测和初始化事件还未开始 created（创建后） 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来 beforeMount（载入前） 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。 mounted（载入后） 在el 被">
+<meta name="description" content="前言作为一个react的小白，今天在写我的第一个demo—todolist遇到了一些状况。发现每次点击提交按钮后都会有一个刷新，会把state重置。就这个让我废了一番功夫，今天就来总结一下关于state的问题。 解决方案首先，要解决之前的问题，第一个方法就是将button中的type=&amp;quot;submit&amp;quot;去掉。直接通过绑定的click方法去setState，这样就不会重置state">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue生命周期">
-<meta property="og:url" content="http://strangleboy.github.io/2020/04/17/vue生命周期/index.html">
+<meta property="og:title" content="react+material-ui制作todolist问题总结">
+<meta property="og:url" content="http://strangleboy.github.io/2020/06/07/react+material-ui制作todolist问题总结/index.html">
 <meta property="og:site_name" content="航">
-<meta property="og:description" content="beforeCreate（创建前） 在数据观测和初始化事件还未开始 created（创建后） 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来 beforeMount（载入前） 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。 mounted（载入后） 在el 被">
+<meta property="og:description" content="前言作为一个react的小白，今天在写我的第一个demo—todolist遇到了一些状况。发现每次点击提交按钮后都会有一个刷新，会把state重置。就这个让我废了一番功夫，今天就来总结一下关于state的问题。 解决方案首先，要解决之前的问题，第一个方法就是将button中的type=&amp;quot;submit&amp;quot;去掉。直接通过绑定的click方法去setState，这样就不会重置state">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-03T09:31:10.995Z">
+<meta property="og:updated_time" content="2020-06-08T06:11:01.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue生命周期">
-<meta name="twitter:description" content="beforeCreate（创建前） 在数据观测和初始化事件还未开始 created（创建后） 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来 beforeMount（载入前） 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。 mounted（载入后） 在el 被">
+<meta name="twitter:title" content="react+material-ui制作todolist问题总结">
+<meta name="twitter:description" content="前言作为一个react的小白，今天在写我的第一个demo—todolist遇到了一些状况。发现每次点击提交按钮后都会有一个刷新，会把state重置。就这个让我废了一番功夫，今天就来总结一下关于state的问题。 解决方案首先，要解决之前的问题，第一个方法就是将button中的type=&amp;quot;submit&amp;quot;去掉。直接通过绑定的click方法去setState，这样就不会重置state">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +60,7 @@
   };
 </script>
 
-  <title> vue生命周期 | 航 </title>
+  <title> react+material-ui制作todolist问题总结 | 航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -177,7 +177,7 @@
           
           
             
-              vue生命周期
+              react+material-ui制作todolist问题总结
             
           
         </h1>
@@ -186,8 +186,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2020-04-17T17:46:12+08:00" content="2020-04-17">
-            2020-04-17
+          <time itemprop="dateCreated" datetime="2020-06-07T21:52:47+08:00" content="2020-06-07">
+            2020-06-07
           </time>
         </span>
 
@@ -196,8 +196,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Vue/" itemprop="url" rel="index">
-                  <span itemprop="name">Vue</span>
+                <a href="/categories/React/" itemprop="url" rel="index">
+                  <span itemprop="name">React</span>
                 </a>
               </span>
 
@@ -220,14 +220,20 @@
       
 
       
-        <span itemprop="articleBody"><p><font color="red"><strong>beforeCreate</strong>（创建前）</font> 在数据观测和初始化事件还未开始</p>
-<p><font color="red"><strong>created</strong>（创建后）</font> 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来</p>
-<p><font color="red"><strong>beforeMount</strong>（载入前）</font> 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。</p>
-<p><font color="red"><strong>mounted</strong>（载入后） </font>在el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用。实例已完成以下的配置：用上面编译好的html内容替换el属性指向的DOM对象。完成模板中的html渲染到html页面中。此过程中进行ajax交互。</p>
-<p><font color="red"><strong>beforeUpdate</strong>（更新前）</font> 在数据更新之前调用，发生在虚拟DOM重新渲染和打补丁之前。可以在该钩子中进一步地更改状态，不会触发附加的重渲染过程。</p>
-<p><font color="red"><strong>updated</strong>（更新后）</font> 在由于数据更改导致的虚拟DOM重新渲染和打补丁之后调用。调用时，组件DOM已经更新，所以可以执行依赖于DOM的操作。然而在大多数情况下，应该避免在此期间更改状态，因为这可能会导致更新无限循环。该钩子在服务器端渲染期间不被调用。</p>
-<p><font color="red"><strong>beforeDestroy</strong>（销毁前）</font> 在实例销毁之前调用。实例仍然完全可用。</p>
-<p><font color="red"><strong>destroyed</strong>（销毁后）</font> 在实例销毁之后调用。调用后，所有的事件监听器会被移除，所有的子实例也会被销毁。该钩子在服务器端渲染期间不被调用。</p>
+        <span itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个react的小白，今天在写我的第一个demo—todolist遇到了一些状况。发现每次点击提交按钮后都会有一个刷新，会把state重置。就这个让我废了一番功夫，今天就来总结一下关于state的问题。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>首先，要解决之前的问题，第一个方法就是将button中的<code>type=&quot;submit&quot;</code>去掉。直接通过绑定的click方法去<code>setState</code>，这样就不会重置<code>state</code>了。第二个方法就是在提交的点击方法中添加<code>e.preventDefault()</code>，它会阻止提交表单的默认行为，防止了因为submit造成的刷新。还有一种就是将信息持久化存储，最简单的是存储在<code>localStorage</code>中。</p>
+<h1 id="state的使用"><a href="#state的使用" class="headerlink" title="state的使用"></a>state的使用</h1><p>官网中提到了<a href="https://zh-hans.reactjs.org/docs/state-and-lifecycle.html#do-not-modify-state-directly" target="_blank" rel="noopener">正确使用State的三件事</a><br>1.不要直接修改<code>State</code><br>2.<code>state</code>的更新可能是异步的<br>3.<code>state</code>的更新会被合并<br>其主要讲述的是如何使用<code>setState()</code>。<br>1.修改<code>state</code>时需要使用<code>setState()</code>进行修改。<br>2.由于<code>this.props</code>和<code>this.state</code>可能会异步更新，所以不要依赖它们的值来更新状态，可以通过<code>setState</code>接收一个函数的方式来更新，参数就是<code>state</code>与<code>props</code>.<br>3.react会合并多个<code>setSstate</code>调用合并成一个调用，所以可以把每个不同的<code>state</code>分开设定。</p>
+<h1 id="遇到的其他问题"><a href="#遇到的其他问题" class="headerlink" title="遇到的其他问题"></a>遇到的其他问题</h1><h2 id="删除的实现"><a href="#删除的实现" class="headerlink" title="删除的实现"></a>删除的实现</h2><p>onClick={this.delList.bind(this,value.id)}<br>在子组件中传参value.id<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.state.list.filter((item)=&gt;![index].includes(item.id))</span><br></pre></td></tr></table></figure></p>
+<p>过滤掉包含该id的选项</p>
+<h2 id="出现input框中无法输入英文数字等"><a href="#出现input框中无法输入英文数字等" class="headerlink" title="出现input框中无法输入英文数字等"></a>出现input框中无法输入英文数字等</h2><p>这个问题比较emm…原来是因为我设置了onKeyDown。<br>之前在使用的时候，为了防止回车按下后刷新，使用了preventDefault，但是放在判断之外导致只要检测到有按键按下就会阻止。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 之前的写法 --&gt;</span><br><span class="line">onKeyDownChange(e)&#123;</span><br><span class="line">	e.preventDefault();</span><br><span class="line">	<span class="keyword">if</span>(e.keyCode === <span class="number">13</span>)&#123;</span><br><span class="line">		<span class="keyword">this</span>.addItem();</span><br><span class="line">		<span class="keyword">this</span>.setState(&#123;</span><br><span class="line">			targetValue: <span class="string">''</span>;</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>更改后如下：</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">onKeyDownChange(e)&#123;</span><br><span class="line">	<span class="keyword">if</span>(e.keyCode === <span class="number">13</span>)&#123;</span><br><span class="line">	  e.preventDefault();</span><br><span class="line">	  <span class="keyword">this</span>.addItem();</span><br><span class="line">	  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">	    targetValue: <span class="string">''</span></span><br><span class="line">	  &#125;)</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">	    targetValue: e.target.value,</span><br><span class="line">	  &#125;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>这样就好了XD</p>
 </span>
       
     </div>
@@ -245,13 +251,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/17/ES6字符串/" rel="prev">ES6字符串</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/17/vue学习一些疑问的记录/" rel="next">vue学习一些疑问的记录</a>
+              <a href="/2020/06/07/js关于深拷贝与浅拷贝问题/" rel="next">js关于深拷贝与浅拷贝问题</a>
             
           </div>
         </div>
@@ -520,7 +524,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#state的使用"><span class="nav-number">3.</span> <span class="nav-text">state的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#遇到的其他问题"><span class="nav-number">4.</span> <span class="nav-text">遇到的其他问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除的实现"><span class="nav-number">4.1.</span> <span class="nav-text">删除的实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出现input框中无法输入英文数字等"><span class="nav-number">4.2.</span> <span class="nav-text">出现input框中无法输入英文数字等</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
