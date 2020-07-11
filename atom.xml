@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://strangleboy.github.io/"/>
-  <updated>2020-06-08T06:11:01.494Z</updated>
+  <updated>2020-07-11T08:20:41.701Z</updated>
   <id>http://strangleboy.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>win10如何处理重装系统后的应用问题</title>
+    <link href="http://strangleboy.github.io/2020/07/04/win10%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%90%8E%E7%9A%84%E5%BA%94%E7%94%A8%E9%97%AE%E9%A2%98/"/>
+    <id>http://strangleboy.github.io/2020/07/04/win10如何处理重装系统后的应用问题/</id>
+    <published>2020-07-04T09:45:57.084Z</published>
+    <updated>2020-07-11T08:20:41.701Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="总结" scheme="http://strangleboy.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="windows10" scheme="http://strangleboy.github.io/tags/windows10/"/>
+    
+      <category term="配置" scheme="http://strangleboy.github.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>react+material-ui制作todolist问题总结</title>
@@ -359,7 +387,7 @@
     <link href="http://strangleboy.github.io/2019/06/01/hexo+github-pages%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
     <id>http://strangleboy.github.io/2019/06/01/hexo+github-pages搭建静态博客/</id>
     <published>2019-06-01T04:28:40.125Z</published>
-    <updated>2020-05-15T13:00:02.061Z</updated>
+    <updated>2020-07-11T08:03:46.811Z</updated>
     
     <summary type="html">
     
