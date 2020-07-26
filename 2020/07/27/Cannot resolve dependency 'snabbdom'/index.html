@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="前端,">
+  <meta name="keywords" content="snabbdom,">
 
 
 
@@ -39,18 +39,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1">
 
 
-<meta name="description" content="beforeCreate（创建前） 在数据观测和初始化事件还未开始 created（创建后） 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来 beforeMount（载入前） 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。 mounted（载入后） 在el 被">
-<meta name="keywords" content="前端">
+<meta name="description" content="前言今天使用snabbdom时，发现snabbdom更新到1.0.1。当使用import {h} from &amp;quot;snabbdom&amp;quot;，出现错误：1Cannot resolve dependency &amp;apos;snabbdom&amp;apos; 晚上查了好久没找到解决方案。 解决方案最终查看源码发现是因为目录结构变了，所以最后使用的是：123import &amp;#123; init &amp;#12">
+<meta name="keywords" content="snabbdom">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue生命周期">
-<meta property="og:url" content="http://strangleboy.github.io/2020/04/17/vue生命周期/index.html">
+<meta property="og:title" content="Cannot resolve dependency &#39;snabbdom&#39;">
+<meta property="og:url" content="http://strangleboy.github.io/2020/07/27/Cannot resolve dependency 'snabbdom'/index.html">
 <meta property="og:site_name" content="航">
-<meta property="og:description" content="beforeCreate（创建前） 在数据观测和初始化事件还未开始 created（创建后） 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来 beforeMount（载入前） 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。 mounted（载入后） 在el 被">
+<meta property="og:description" content="前言今天使用snabbdom时，发现snabbdom更新到1.0.1。当使用import {h} from &amp;quot;snabbdom&amp;quot;，出现错误：1Cannot resolve dependency &amp;apos;snabbdom&amp;apos; 晚上查了好久没找到解决方案。 解决方案最终查看源码发现是因为目录结构变了，所以最后使用的是：123import &amp;#123; init &amp;#12">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-03T09:31:10.995Z">
+<meta property="og:updated_time" content="2020-07-26T16:39:09.564Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue生命周期">
-<meta name="twitter:description" content="beforeCreate（创建前） 在数据观测和初始化事件还未开始 created（创建后） 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来 beforeMount（载入前） 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。 mounted（载入后） 在el 被">
+<meta name="twitter:title" content="Cannot resolve dependency &#39;snabbdom&#39;">
+<meta name="twitter:description" content="前言今天使用snabbdom时，发现snabbdom更新到1.0.1。当使用import {h} from &amp;quot;snabbdom&amp;quot;，出现错误：1Cannot resolve dependency &amp;apos;snabbdom&amp;apos; 晚上查了好久没找到解决方案。 解决方案最终查看源码发现是因为目录结构变了，所以最后使用的是：123import &amp;#123; init &amp;#12">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +60,7 @@
   };
 </script>
 
-  <title> vue生命周期 | 航 </title>
+  <title> Cannot resolve dependency 'snabbdom' | 航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -177,7 +177,7 @@
           
           
             
-              vue生命周期
+              Cannot resolve dependency 'snabbdom'
             
           
         </h1>
@@ -186,8 +186,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2020-04-17T17:46:12+08:00" content="2020-04-17">
-            2020-04-17
+          <time itemprop="dateCreated" datetime="2020-07-27T00:39:09+08:00" content="2020-07-27">
+            2020-07-27
           </time>
         </span>
 
@@ -196,8 +196,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Vue/" itemprop="url" rel="index">
-                  <span itemprop="name">Vue</span>
+                <a href="/categories/error/" itemprop="url" rel="index">
+                  <span itemprop="name">error</span>
                 </a>
               </span>
 
@@ -220,14 +220,10 @@
       
 
       
-        <span itemprop="articleBody"><p><font color="red"><strong>beforeCreate</strong>（创建前）</font> 在数据观测和初始化事件还未开始</p>
-<p><font color="red"><strong>created</strong>（创建后）</font> 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来</p>
-<p><font color="red"><strong>beforeMount</strong>（载入前）</font> 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。</p>
-<p><font color="red"><strong>mounted</strong>（载入后） </font>在el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用。实例已完成以下的配置：用上面编译好的html内容替换el属性指向的DOM对象。完成模板中的html渲染到html页面中。此过程中进行ajax交互。</p>
-<p><font color="red"><strong>beforeUpdate</strong>（更新前）</font> 在数据更新之前调用，发生在虚拟DOM重新渲染和打补丁之前。可以在该钩子中进一步地更改状态，不会触发附加的重渲染过程。</p>
-<p><font color="red"><strong>updated</strong>（更新后）</font> 在由于数据更改导致的虚拟DOM重新渲染和打补丁之后调用。调用时，组件DOM已经更新，所以可以执行依赖于DOM的操作。然而在大多数情况下，应该避免在此期间更改状态，因为这可能会导致更新无限循环。该钩子在服务器端渲染期间不被调用。</p>
-<p><font color="red"><strong>beforeDestroy</strong>（销毁前）</font> 在实例销毁之前调用。实例仍然完全可用。</p>
-<p><font color="red"><strong>destroyed</strong>（销毁后）</font> 在实例销毁之后调用。调用后，所有的事件监听器会被移除，所有的子实例也会被销毁。该钩子在服务器端渲染期间不被调用。</p>
+        <span itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天使用snabbdom时，发现snabbdom更新到1.0.1。当使用<code>import {h} from &quot;snabbdom&quot;</code>，出现错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot resolve dependency &apos;snabbdom&apos;</span><br></pre></td></tr></table></figure></p>
+<p>晚上查了好久没找到解决方案。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>最终查看源码发现是因为目录结构变了，所以最后使用的是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &#123; init &#125; from &apos;snabbdom/build/package/init&apos;</span><br><span class="line">import &#123; thunk &#125; from &apos;snabbdom/build/package/thunk&apos;</span><br><span class="line">import &#123; h &#125; from &apos;snabbdom/build/package/h&apos;</span><br></pre></td></tr></table></figure></p>
+<p>这里要使用build目录，不能使用src目录。<br>🆗完成</p>
 </span>
       
     </div>
@@ -236,7 +232,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端/" rel="tag">#前端</a>
+            <a href="/tags/snabbdom/" rel="tag">#snabbdom</a>
           
         </div>
       
@@ -245,13 +241,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/17/ES6字符串/" rel="prev">ES6字符串</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/17/vue学习一些疑问的记录/" rel="next">vue学习一些疑问的记录</a>
+              <a href="/2020/07/04/win10如何处理重装系统后的应用问题/" rel="next">win10如何处理重装系统后的应用问题</a>
             
           </div>
         </div>
@@ -520,7 +514,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
